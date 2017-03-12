@@ -1,4 +1,4 @@
-(defproject cljs-react-reload "0.1.1"
+(defproject org.clojars.deas/cljs-react-reload "0.1.1-nm"
   :description "A library to define React classes that maintain local state on reload."
   :url "https://github.com/bhauman/cljs-react-reload"
   :license {:name "Eclipse Public License"
@@ -32,7 +32,7 @@
              :dev {
                    :resource-paths ["example-resources"]
                    :dependencies [[devcards "0.2.0-SNAPSHOT"]
-                                  [sablono "0.3.6"]
+                                  [org.clojars.deas/sablono "0.7.7-nm"]
                                   [org.clojure/clojurescript "1.7.122"]]
                    :plugins [[lein-cljsbuild "1.1.0"]
                              [lein-figwheel "0.4.0"]]}})

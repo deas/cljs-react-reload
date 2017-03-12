@@ -1,6 +1,7 @@
 (ns react-reload-devcards.core
   (:require
-   [sablono.core :as sab :include-macros true])
+   [sablono.core :as sab :include-macros true]
+   [react])
   (:require-macros
    [devcards.core :as dc :refer [defcard deftest]]
    [cljs-react-reload.core :refer [def-react-class defonce-react-class]]))
@@ -32,7 +33,7 @@
   "When you redefine a React class the React diffing algorithm blows
    away the local state of the component. If increment the counter and
    you edit the `my-class` component you will see this in action."
-  (js/React.createElement my-class #js {:name "Mike"}))
+  (react/createElement my-class #js {:name "Mike"}))
 
 (defonce-react-class my-classyy
   #js {:getInitialState
@@ -62,4 +63,4 @@
 
 (defcard defonce-react-class-example
   "The solution is to define the React class once and then patch it's protoype."
-  (js/React.createElement my-classyy #js {:name "Margaret"}))
+  (react/createElement my-classyy #js {:name "Margaret"}))
